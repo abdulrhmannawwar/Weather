@@ -26,7 +26,7 @@ async function fetchCountries() {
     countryNames.sort(); 
     for(let i = 0 ; i<countryNames.length; i++){
         let ele = document.createElement('option');
-        if(!countryNames[i].includes(" ")){
+        if(!countryNames[i].includes(" ") && countryNames[i]!="Antarctica"){
             ele.value = countryNames[i];
             ele.textContent = countryNames[i];
             countries.appendChild(ele);

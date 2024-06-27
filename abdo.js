@@ -8,7 +8,7 @@ async function fetchUrl(url){
         const promise = await fetch(url);
         const data = await promise.json();
         img.src = data.current.condition.icon ;
-        temp.innerHTML = data.current.temp_c + "°";
+        temp.innerHTML = data.current.temp_c + "°C";
         cond.innerHTML = data.current.condition.text;
         console.log(data);
     }
@@ -22,7 +22,7 @@ async function fetchCountries() {
     const response = await fetch('https://restcountries.com/v3.1/all');
     const data = await response.json();
     const countryNames = data.map(country => country.name.common); 
-    
+
     countryNames.sort(); 
     for(let i = 0 ; i<countryNames.length; i++){
         let ele = document.createElement('option');

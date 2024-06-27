@@ -13,6 +13,7 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     overflow: hidden;
+    z-index: -1;
 }
 .cloudTwo{
     position: absolute;
@@ -25,6 +26,7 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     overflow: hidden;
+    z-index: -1;
 }
 .weather{
     display: flex;
@@ -36,6 +38,7 @@ body{
     border-radius: 10px;
     padding: 10px;
     background-color: rgba(166, 176, 242, 0.722);
+    z-index: 1;
 }
 #image{
     display: block;
@@ -61,7 +64,7 @@ body{
     border: none;
     color: rgb(37, 67, 107);
     font-family: "Cairo", sans-serif;
-
+    z-index: 1;
 }
 #countries:focus{
     border: 2px solid rgba(52, 45, 255, 0.234);

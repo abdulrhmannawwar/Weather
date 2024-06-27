@@ -1,4 +1,4 @@
-let URL = "http://api.weatherapi.com/v1/current.json?key=42f146a1737c47258cd223820242306&q=Egypt"
+let URL = "https://api.weatherapi.com/v1/current.json?key=42f146a1737c47258cd223820242306&q=Egypt"
 let img = document.getElementById("image");
 let temp = document.getElementById("temp");
 let cond = document.getElementById("cond");
@@ -39,7 +39,7 @@ async function fetchCountries() {
 }
 countries.addEventListener("input",()=>{
     console.log(countries.value);
-    let url = `http://api.weatherapi.com/v1/current.json?key=42f146a1737c47258cd223820242306&q=${countries.value}`;
+    let url = `https://api.weatherapi.com/v1/current.json?key=42f146a1737c47258cd223820242306&q=${countries.value}`;
     fetchUrl(url);
 })
 fetchCountries();

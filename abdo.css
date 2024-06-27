@@ -1,0 +1,88 @@
+body{
+    background-image: linear-gradient(to left, #bed9ee, #9cc1e2, #7da8d6, #6090c9, #4677bc);
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cloudOne{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    animation-name: cloudAnimation1;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow: hidden;
+}
+.cloudTwo{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 0;
+    top : 300px;
+    animation-name: cloudAnimation2;
+    animation-duration: 22s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow: hidden;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    width: 300px;
+    height: 430px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(166, 176, 242, 0.722);
+}
+#image{
+    display: block;
+    width: 40%;
+    height: 35%;
+}
+#temp{
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Cairo", sans-serif;
+}
+#choose{
+    margin: 10px;
+}
+#countries{
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #2b75d066;
+    border: none;
+    color: rgb(37, 67, 107);
+    font-family: "Cairo", sans-serif;
+
+}
+#countries:focus{
+    border: 2px solid rgba(52, 45, 255, 0.234);
+}
+#cond{
+    font-family: "Cairo", sans-serif;
+    font-size: 20px;
+}
+@keyframes cloudAnimation1 {
+    0%{
+    margin-left: 100%;
+    }
+    100%{
+        margin-left: -70%;
+    }
+}
+@keyframes cloudAnimation2 {
+    0%{
+    margin-right: 100%;
+    }
+    100%{
+    margin-right: -70%;
+    }
+}

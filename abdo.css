@@ -79,7 +79,7 @@ body{
     margin-left: 100%;
     }
     100%{
-        margin-left: -70%;
+        margin-left: -80%;
     }
 }
 @keyframes cloudAnimation2 {
@@ -87,6 +87,6 @@ body{
     margin-right: 100%;
     }
     100%{
-    margin-right: -70%;
+    margin-right: -80%;
     }
 }

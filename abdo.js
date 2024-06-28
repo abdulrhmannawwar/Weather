@@ -25,7 +25,7 @@ async function fetchCountries() {
 
     countryNames.sort(); 
     for(let i = 0 ; i<countryNames.length; i++){
-        let notFound = ["Antarctica","Eswatini","Czechia"]
+        let notFound = ["Antarctica","Eswatini","Czechia","Israel"]
         let ele = document.createElement('option');
         if(!countryNames[i].includes(" ") && !notFound.includes(countryNames[i])){
             ele.value = countryNames[i];

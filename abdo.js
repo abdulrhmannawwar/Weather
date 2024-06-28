@@ -10,7 +10,7 @@ async function fetchUrl(url){
         img.src = data.current.condition.icon ;
         temp.innerHTML = data.current.temp_c + "°C";
         cond.innerHTML = data.current.condition.text;
-        console.log(data);
+       // console.log(data);
     }
     catch(e){
         temp.innerHTML = "could not find the country";
@@ -25,8 +25,9 @@ async function fetchCountries() {
 
     countryNames.sort(); 
     for(let i = 0 ; i<countryNames.length; i++){
+        let notFound = ["Antarctica","Eswatini","Czechia"]
         let ele = document.createElement('option');
-        if(!countryNames[i].includes(" ") && countryNames[i]!="Antarctica"){
+        if(!countryNames[i].includes(" ") && !notFound.includes(countryNames[i])){
             ele.value = countryNames[i];
             ele.textContent = countryNames[i];
             countries.appendChild(ele);
@@ -38,7 +39,7 @@ async function fetchCountries() {
     }
 }
 countries.addEventListener("input",()=>{
-    console.log(countries.value);
+   // console.log(countries.value);
     let url = `https://api.weatherapi.com/v1/current.json?key=42f146a1737c47258cd223820242306&q=${countries.value}`;
     fetchUrl(url);
 })
